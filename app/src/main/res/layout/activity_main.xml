@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.workoutgenerator.MainActivity"
+    android:orientation="vertical"
+    android:background="#252839">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:text="Equipment:"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"/>
+
+    <Spinner
+        android:id="@+id/equipment_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:entries="@array/equipment_array"
+        android:prompt="@string/equipment_prompt"
+        android:spinnerMode="dialog"
+        android:backgroundTint="#FFFFFF"
+        style="@style/mySpinnerStyle"
+        />
+
+
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/equipment_layout2"
+        >
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:entries="@array/equipment_array"
+            android:prompt="@string/equipment_prompt"
+            android:spinnerMode="dialog"
+
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/equipment_layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:entries="@array/equipment_array"
+            android:prompt="@string/equipment_prompt"
+            android:spinnerMode="dialog"
+
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add Equipment"
+        android:onClick="addEquipment"
+        android:layout_marginBottom="40dp"
+        style="@style/ButtonStyle"
+
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:text="Movements:"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"/>
+
+        <Spinner
+            android:id="@+id/movements_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:entries="@array/movement_array"
+            android:prompt="@string/movement_prompt"
+            android:spinnerMode="dialog"
+            android:backgroundTint="#FFFFFF"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/movement_layout2"
+        >
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:entries="@array/equipment_array"
+            android:prompt="@string/equipment_prompt"
+            android:spinnerMode="dialog"
+
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/movement_layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:entries="@array/equipment_array"
+            android:prompt="@string/equipment_prompt"
+            android:spinnerMode="dialog"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add Movement"
+        android:onClick="addMovement"
+        android:layout_marginBottom="40dp"
+        style="@style/ButtonStyle"/>
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:text="Generate workouts"
+        android:layout_gravity="center"
+        android:onClick="submit"
+        style="@style/ButtonStyle"
+        />
+
+</LinearLayout>

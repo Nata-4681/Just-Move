@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Workout Generator</string>
+    <string name="equipment_prompt">Equipment to Include</string>
+    <string name="movement_prompt">Movements to Include</string>
+
+    <string-array name="equipment_array">
+        <item>Any</item>
+        <item>Dumbbell</item>
+        <item>Barbell</item>
+        <item>Treadmill</item>
+        <item>Medicine Ball</item>
+    </string-array>
+
+    <string-array name="movement_array">
+        <item>Any</item>
+        <item>Squat</item>
+        <item>Push up</item>
+        <item>Sit up</item>
+        <item>Pull up</item>
+        <item>Muscle Up</item>
+        <item>Thrusters</item>
+        <item>Cleans</item>
+        <item>Snatch</item>
+    </string-array>
+</resources>

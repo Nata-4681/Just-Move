@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rounded_gridview"
+    >
+
+    <TextView
+        android:id="@+id/description_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        tools:text="5 Rounds for time\n10 Burpees\n10 Sit ups\n10 Pushups"
+        android:textColor="@color/colorPrimaryDark"/>
+
+
+
+</LinearLayout>
