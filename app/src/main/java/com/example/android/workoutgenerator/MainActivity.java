@@ -92,5 +92,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void savedWorkouts(View view){
+        Intent intent = new Intent(this, SavedActivity.class);
+        startActivity(intent);
+
+    }
+
 
 }

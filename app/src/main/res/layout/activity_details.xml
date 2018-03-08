@@ -12,9 +12,9 @@
         android:id="@+id/fulldescription"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="3"
         android:gravity="center"
-        android:textSize="40dp"
+        android:textSize="24dp"
         tools:text="First Workout\nTesting Size"
         android:textColor="@color/colorPrimaryDark"
         />
@@ -25,8 +25,63 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:layout_weight="1"
-        android:textSize="32dp"
+        android:textSize="20dp"
         tools:text="Rx Weight\nTesting"
         android:textColor="@color/colorPrimaryDark"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".25"
+        android:background="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Previous Performance"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="italic"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add"
+        style="@style/ButtonStyle"
+        android:onClick="addNewWorkout"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <EditText
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:inputType="date"
+        android:textSize="20dp"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"/>
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>
 
 </LinearLayout>

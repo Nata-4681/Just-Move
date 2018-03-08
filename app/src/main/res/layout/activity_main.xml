@@ -4,119 +4,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.workoutgenerator.MainActivity"
+    android:background="@drawable/kettlebell"
     android:orientation="vertical"
-    android:background="@drawable/kettlebell">
+    tools:context="com.example.android.workoutgenerator.MainActivity">
 
-
-<LinearLayout
-    android:layout_width="140dp"
-    android:layout_height="wrap_content"
-    android:background="#9A252839"
-    android:layout_marginBottom="20dp"
-    android:layout_marginTop="20dp"
-    android:layout_gravity="center">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/pacifico"
-        android:gravity="center"
-        android:textAllCaps="true"
-        android:text="Move"
-        android:textColor="#FFFFFF"
-        android:textSize="40sp" />
-</LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#CC252839"
-        >
-    <TextView
         android:layout_width="140dp"
-        android:layout_height="48dp"
-        android:text="Equipment:"
-        android:textSize="24sp"
-        android:gravity="center"
-        android:textColor="#FFFFFF"/>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#9A252839">
 
-    <Spinner
-        android:id="@+id/equipment_spinner1"
-        android:layout_width="fill_parent"
-        android:layout_height="48dp"
-        android:entries="@array/equipment_array"
-        android:spinnerMode="dialog"
-        android:backgroundTint="#FFFFFF"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pacifico"
+            android:gravity="center"
+            android:text="Move"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp" />
+    </LinearLayout>
 
-        />
-
-
-
-</LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="gone"
-        android:id="@+id/equipment_layout2"
         android:background="#CC252839"
-        >
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="140dp"
             android:layout_height="48dp"
-            android:textSize="24sp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="Equipment:"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:id="@+id/equipment_spinner1"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#FFFFFF"
+            android:entries="@array/equipment_array"
+            android:spinnerMode="dialog"
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/equipment_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CC252839"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:textSize="24sp" />
 
         <Spinner
             android:id="@+id/equipment_spinner2"
             android:layout_width="fill_parent"
             android:layout_height="48dp"
+            android:backgroundTint="#FFFFFF"
             android:entries="@array/equipment_array"
             android:spinnerMode="dialog"
-            android:backgroundTint="#FFFFFF"
 
             />
 
 
-
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/equipment_layout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="gone"
         android:background="#CC252839"
-        >
+        android:orientation="horizontal"
+        android:visibility="gone">
+
         <TextView
             android:layout_width="140dp"
             android:layout_height="48dp"
 
-            android:textSize="24sp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textSize="24sp" />
 
         <Spinner
             android:id="@+id/equipment_spinner3"
             android:layout_width="fill_parent"
             android:layout_height="48dp"
+            android:backgroundTint="#FFFFFF"
             android:entries="@array/equipment_array"
             android:spinnerMode="dialog"
-            android:backgroundTint="#FFFFFF"
 
             />
 
     </LinearLayout>
 
     <Button
+        style="@style/ButtonStyle"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Add Equipment"
-        android:onClick="addEquipment"
         android:layout_marginBottom="40dp"
-        style="@style/ButtonStyle"
+        android:onClick="addEquipment"
+        android:text="Add Equipment"
 
 
         />
@@ -125,101 +125,111 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:background="#CC252839"
-        >
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="140dp"
             android:layout_height="48dp"
-            android:text="Movements:"
-            android:textSize="24sp"
             android:gravity="center"
-            android:textColor="#FFFFFF"/>
+            android:text="Movements:"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
         <Spinner
             android:id="@+id/movements_spinner1"
+            style="@style/mySpinnerItemStyle"
             android:layout_width="fill_parent"
             android:layout_height="48dp"
-            android:entries="@array/movement_array"
-            android:spinnerMode="dialog"
             android:backgroundTint="#FFFFFF"
-            style="@style/mySpinnerItemStyle"
-            />
+            android:entries="@array/movement_array"
+            android:spinnerMode="dialog" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/movement_layout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="gone"
-        android:id="@+id/movement_layout2"
         android:background="#CC252839"
-        >
+        android:orientation="horizontal"
+        android:visibility="gone">
+
         <TextView
             android:layout_width="140dp"
             android:layout_height="48dp"
-            android:textSize="24sp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textSize="24sp" />
 
         <Spinner
             android:id="@+id/movements_spinner2"
+            style="@style/mySpinnerItemStyle"
             android:layout_width="fill_parent"
             android:layout_height="48dp"
+            android:backgroundTint="#FFFFFF"
             android:entries="@array/movement_array"
             android:spinnerMode="dialog"
-            android:backgroundTint="#FFFFFF"
-            style="@style/mySpinnerItemStyle"
 
             />
 
 
-
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/movement_layout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="gone"
         android:background="#CC252839"
-        >
+        android:orientation="horizontal"
+        android:visibility="gone">
+
         <TextView
             android:layout_width="140dp"
             android:layout_height="48dp"
-            android:textSize="24sp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textSize="24sp" />
 
         <Spinner
             android:id="@+id/movements_spinner3"
+            style="@style/mySpinnerItemStyle"
             android:layout_width="fill_parent"
             android:layout_height="48dp"
-            android:entries="@array/movement_array"
-            android:spinnerMode="dialog"
             android:backgroundTint="#FFFFFF"
-            style="@style/mySpinnerItemStyle"
-            />
+            android:entries="@array/movement_array"
+            android:spinnerMode="dialog" />
 
     </LinearLayout>
 
     <Button
+        style="@style/ButtonStyle"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Add Movement"
-        android:onClick="addMovement"
         android:layout_marginBottom="40dp"
-        style="@style/ButtonStyle"/>
+        android:onClick="addMovement"
+        android:text="Add Movement" />
 
     <Button
         android:id="@+id/generate"
+        style="@style/ButtonStyle"
         android:layout_width="160dp"
         android:layout_height="48dp"
-        android:text="Generate workouts"
         android:layout_gravity="center"
         android:onClick="submit"
-        style="@style/ButtonStyle"
-        />
+        android:text="Generate workouts" />
 
-</LinearLayout>
+
+        <Button
+            style="@style/ButtonStyle"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Saved Workouts"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="savedWorkouts"/>
+
+    </LinearLayout>
+
+
