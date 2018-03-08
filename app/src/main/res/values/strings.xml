@@ -9,6 +9,7 @@
         <item>Barbell</item>
         <item>Treadmill</item>
         <item>Medicine Ball</item>
+        <item>Jump Rope</item>
     </string-array>
 
     <string-array name="movement_array">
@@ -21,5 +22,7 @@
         <item>Thrusters</item>
         <item>Cleans</item>
         <item>Snatch</item>
+        <item>Run</item>
+        <item>Burpees</item>
     </string-array>
 </resources>
