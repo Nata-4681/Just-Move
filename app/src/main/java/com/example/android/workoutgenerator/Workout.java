@@ -14,18 +14,20 @@ public class Workout implements Serializable {
     //  - AMRAP (As many reps as possible)
     //  - FT (For Time)
     //  - EMOM (Every minute on the minute)
-    //  -
-
-
+    //
+    // Saved determines if the workout is a saved workout. 0 denotes no, 1 denotes yes. The constructors
+    // set all 'saved' variables to 0 to start.
     String workoutDesc;
     String workoutRX;
     String type;
+    int saved;
 
 
     //Made 2 constructors. The first one does not include an RX value
     public Workout(String description, String type) {
         this.workoutDesc = description;
         this.type = type;
+        this.saved = 0;
 
     }
     // The second constructor here includes and RX weight
@@ -33,6 +35,7 @@ public class Workout implements Serializable {
         this.workoutDesc = description;
         this.workoutRX = rx;
         this.type = type;
+        this.saved = 0;
     }
 
     public String getWorkoutDesc() {
@@ -55,7 +58,16 @@ public class Workout implements Serializable {
         return type;
     }
 
+
     public void setType(String type) {
         this.type = type;
+    }
+
+    public int getSaved() {
+        return saved;
+    }
+
+    public void setSaved(int saved) {
+        this.saved = saved;
     }
 }
