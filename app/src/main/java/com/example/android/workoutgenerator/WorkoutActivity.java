@@ -10,14 +10,17 @@ import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class WorkoutActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout);
 
@@ -32,19 +35,18 @@ public class WorkoutActivity extends AppCompatActivity {
 
 
 
-        /**
-         * This creates a full array of all the workouts
-         */
         final ArrayList<Workout> workouts = new ArrayList<>();
-        workouts.add(new Workout("5 rounds for time of:\n" + "Run 400 meters\n" + "15 thrusters", "Men: 95 lb.\nWomen: 65 lb.", "FT"));
-        workouts.add(new Workout("15 min Thrusters AMRAP:\n10 Burpees\n10 Sit ups\10 Hand Release Push ups", "AMRAP"));
-        workouts.add(new Workout (" 3 rounds for time of:\n" + "50 GHD sit-ups\n" + "25 Dumbbell curls and Thrusters", "FT"));
-        workouts.add(new Workout ("3 Rounds For Time:\nRun 800m\n50 Air Squats", "FT"));
-        workouts.add(new Workout ("10 Rounds For Time:\n10 Pushups\n10 Sit ups\n10 Squats ", "FT"));
-        workouts.add(new Workout("For Time:\n200 Air Squats", "FT"));
-        workouts.add(new Workout("5 Rounds For Time:\nRun 200m\n10 Squats\n10 Push Ups", "FT"));
-        workouts.add(new Workout("AMRAP in 20 minutes:\n5 Pushups\n10 Situps\n15 Squats", "FT"));
-        workouts.add(new Workout("10 min EMOM\nEven Minutes: 20 KB swings\nOdd minutes: 12 burpees", "EMOM"));
+        workouts.add(new Workout("5 rounds for time of:\n" + "Run 400 meters\n" + "15 thrusters", "Men: 95 lb.\nWomen: 65 lb.", "FT", 0));
+        workouts.add(new Workout("15 min Thrusters AMRAP:\n10 Burpees\n10 Sit ups\10 Hand Release Push ups", "AMRAP", 0));
+        workouts.add(new Workout (" 3 rounds for time of:\n" + "50 GHD sit-ups\n" + "25 Dumbbell curls and Thrusters", "FT", 0));
+        workouts.add(new Workout ("3 Rounds For Time:\nRun 800m\n50 Air Squats", "FT", 0));
+        workouts.add(new Workout ("10 Rounds For Time:\n10 Pushups\n10 Sit ups\n10 Squats ", "FT", 0));
+        workouts.add(new Workout("For Time:\n200 Air Squats", "FT", 0));
+        workouts.add(new Workout("5 Rounds For Time:\nRun 200m\n10 Squats\n10 Push Ups", "FT", 0));
+        workouts.add(new Workout("AMRAP in 20 minutes:\n5 Pushups\n10 Situps\n15 Squats", "FT", 0));
+        workouts.add(new Workout("10 min EMOM\nEven Minutes: 20 KB swings\nOdd minutes: 12 burpees", "EMOM", 0));
+
+
 
 
         /**
@@ -108,7 +110,6 @@ public class WorkoutActivity extends AppCompatActivity {
         });
 
     }
-
 
 }
 

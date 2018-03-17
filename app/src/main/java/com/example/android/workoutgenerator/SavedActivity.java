@@ -49,7 +49,7 @@ public class SavedActivity extends AppCompatActivity {
         // Create and/or open a database to read from it
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
 
-        // Perform this raw SQL query "SELECT * FROM pets"
+        // Perform this raw SQL query "SELECT * FROM workouts"
         // to get a Cursor that contains all rows from the pets table.
         String[] projection = {
                 WorkoutEntry._ID,
@@ -82,8 +82,7 @@ public class SavedActivity extends AppCompatActivity {
                 int typeColumnIndex = cursor.getColumnIndex(WorkoutEntry.COLUMN_WO_TYPE);
                 String type = cursor.getString(typeColumnIndex);
 
-                Workout currentWorkout = new Workout(desc, rx, type);
-                currentWorkout.setSaved(1);
+                Workout currentWorkout = new Workout(desc, rx, type, 1);
                 workouts.add(currentWorkout);
 
                 // increment cursor to the next line

@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         mDbHelper = new WorkoutDbHelper(this);
 
 
-        displayDatabaseInfo();
     }
 
 
@@ -130,46 +129,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
-
-
-    private void displayDatabaseInfo() {
-        // To access our database, we instantiate our subclass of SQLiteOpenHelper
-        // and pass the context, which is the current activity.
-        WorkoutDbHelper mDbHelper = new WorkoutDbHelper(this);
-
-        // Create and/or open a database to read from it
-        SQLiteDatabase db = mDbHelper.getReadableDatabase();
-
-        // Perform this raw SQL query "SELECT * FROM pets"
-        // to get a Cursor that contains all rows from the pets table.
-        String[] projection = {
-                WorkoutEntry._ID,
-                WorkoutEntry.COLUMN_WO_DESCRIPTION,
-                WorkoutEntry.COLUMN_WO_RX,
-                WorkoutEntry.COLUMN_WO_TYPE,
-                WorkoutEntry.COLUMN_WO_SAVE,
-        };
-
-        Cursor cursor = db.query(
-                WorkoutEntry.TABLE_NAME,
-                projection, null, null, null, null, null
-        );
-
-
-        try {
-            // Display the number of rows in the Cursor (which reflects the number of rows in the
-            // pets table in the database).
-            TextView displayView = (TextView) findViewById(R.id.display_text_view);
-            displayView.setText("Number of rows in workouts database table: " + cursor.getCount());
-        } finally {
-            // Always close the cursor when you're done reading from it. This releases all its
-            // resources and makes it invalid.
-            cursor.close();
-        }
-    }
-
-
-
 
 
 

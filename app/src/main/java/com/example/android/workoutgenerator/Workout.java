@@ -24,18 +24,18 @@ public class Workout implements Serializable {
 
 
     //Made 2 constructors. The first one does not include an RX value
-    public Workout(String description, String type) {
+    public Workout(String description, String type, int saved) {
         this.workoutDesc = description;
         this.type = type;
-        this.saved = 0;
+        this.saved = saved;
 
     }
     // The second constructor here includes and RX weight
-    public Workout(String description, String rx, String type){
+    public Workout(String description, String rx, String type, int saved){
         this.workoutDesc = description;
         this.workoutRX = rx;
         this.type = type;
-        this.saved = 0;
+        this.saved = saved;
     }
 
     public String getWorkoutDesc() {
