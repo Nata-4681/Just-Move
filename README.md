@@ -5,4 +5,4 @@ I'm a developer, but I also like staying physically fit and active. I am a forme
 My vision is to create an app that will not only display different workout options based on equipment and movement preferences, but also to encourage logging personal progress. I hope to let the user's add workouts to their favorites and let them keep track of the date and time/score for each workout performed. Hopefully this will create a positive effect by showing the continued progress over time for each user.
 
 
-[Project screenshots:](/screenshots/JustMoveHome.PNG)
+![alt text](https://raw.githubusercontent.com/colemclark1/Just-Move/master/screenshots/JustMoveHome.PNG)
