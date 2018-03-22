@@ -81,9 +81,13 @@ public class SavedActivity extends AppCompatActivity {
                 String rx = cursor.getString(rxColumnIndex);
                 int typeColumnIndex = cursor.getColumnIndex(WorkoutEntry.COLUMN_WO_TYPE);
                 String type = cursor.getString(typeColumnIndex);
+                int savedColumnIndex = cursor.getColumnIndex(WorkoutEntry.COLUMN_WO_SAVE);
+                int saved = cursor.getInt(savedColumnIndex);
 
-                Workout currentWorkout = new Workout(desc, rx, type, 1);
-                workouts.add(currentWorkout);
+                if (saved == 1){
+                    Workout currentWorkout = new Workout(desc, rx, type, saved);
+                    workouts.add(currentWorkout);
+                }
 
                 // increment cursor to the next line
                 cursor.moveToNext();

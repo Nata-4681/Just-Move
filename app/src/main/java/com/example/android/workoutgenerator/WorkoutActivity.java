@@ -1,6 +1,8 @@
 package com.example.android.workoutgenerator;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +11,9 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.android.workoutgenerator.data.WorkoutDbHelper;
+import com.example.android.workoutgenerator.data.WorkoutContract.WorkoutEntry;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -45,6 +50,32 @@ public class WorkoutActivity extends AppCompatActivity {
         workouts.add(new Workout("5 Rounds For Time:\nRun 200m\n10 Squats\n10 Push Ups", "FT", 0));
         workouts.add(new Workout("AMRAP in 20 minutes:\n5 Pushups\n10 Situps\n15 Squats", "FT", 0));
         workouts.add(new Workout("10 min EMOM\nEven Minutes: 20 KB swings\nOdd minutes: 12 burpees", "EMOM", 0));
+
+
+        // Need to figure out how to incorporate a databsae here
+
+
+        // This creates a new database if needed or loads the existing database and makes it
+        // writable.
+//        WorkoutDbHelper mDbHelper = new WorkoutDbHelper(this);
+//        SQLiteDatabase db = mDbHelper.getWritableDatabase();
+//
+//        for (int i = 0; i < workouts.size(); ++i){
+//            String currentWorkoutDesc = workouts.get(i).getWorkoutDesc();
+//            String currentWorkoutRx = workouts.get(i).getWorkoutRX();
+//            String currentWorkoutType = workouts.get(i).getType();
+//            int currentWorkoutSaved = workouts.get(i).getSaved();
+//
+//            // This is a sql command that will add the values to the specified columns in the database.
+//            ContentValues values = new ContentValues();
+//            values.put(WorkoutEntry.COLUMN_WO_DESCRIPTION, currentWorkoutDesc);
+//            values.put(WorkoutEntry.COLUMN_WO_RX, currentWorkoutRx);
+//            values.put(WorkoutEntry.COLUMN_WO_TYPE, currentWorkoutType);
+//            values.put(WorkoutEntry.COLUMN_WO_SAVE, currentWorkoutSaved);
+//
+//            long newRowID = db.insert(WorkoutEntry.TABLE_NAME, null, values);
+//        }
+
 
 
 
