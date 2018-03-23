@@ -50,6 +50,23 @@ public class WorkoutActivity extends AppCompatActivity {
         workouts.add(new Workout("5 Rounds For Time:\nRun 200m\n10 Squats\n10 Push Ups", "FT", 0));
         workouts.add(new Workout("AMRAP in 20 minutes:\n5 Pushups\n10 Situps\n15 Squats", "FT", 0));
         workouts.add(new Workout("10 min EMOM\nEven Minutes: 20 KB swings\nOdd minutes: 12 burpees", "EMOM", 0));
+        workouts.add(new Workout("Fran:\n21-15-9\nThrusters\nPull-ups", "Men: 95 lbs.\nWomen: 65 lbs", "FT", 0 ));
+        workouts.add(new Workout("For Time:\n" +
+                "2 Minutes Double Unders\n" +
+                "2 Minutes Situps\n" +
+                "Rest 1 min\n" +
+                "90 sec Double Unders\n" +
+                "90 sec Situps\n" +
+                "Rest 1 min\n" +
+                "60 sec Double Unders\n" +
+                "60 sec Situps", "FT", 0));
+        workouts.add(new Workout("For Time:\n" +
+                "60 Pushups\n" +
+                "Run 400m\n" +
+                "40 Pushups\n" +
+                "Run 800m\n" +
+                "20 Pushups\n" +
+                "Run 1 mile", "FT", 0));
 
 
         // Need to figure out how to incorporate a databsae here

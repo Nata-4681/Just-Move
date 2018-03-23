@@ -5,10 +5,13 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +31,23 @@ public class DetailsActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         Workout detailWorkout = (Workout)i.getSerializableExtra("Workout");
+
+        EditText score = (EditText) findViewById(R.id.score_field);
+        String woType = detailWorkout.getType();
+
+        if (woType.equals("FT")){
+            score.setInputType(InputType.TYPE_CLASS_DATETIME);
+        }
+        else if (woType.equals("AMRAP")){
+            score.setInputType(InputType.TYPE_CLASS_TEXT);
+        }
+        else if (woType.equals("EMOM")){
+            score.setInputType(InputType.TYPE_CLASS_TEXT);
+
+        }
+        else{
+            score.setInputType(InputType.TYPE_CLASS_TEXT);
+        }
 
 
 
@@ -52,6 +72,8 @@ public class DetailsActivity extends AppCompatActivity {
             remove_button.setVisibility(View.VISIBLE);
         }
 
+        //This makes sure the keyboard doesn't pop up until a user clicks an edit text field
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
     }
 
@@ -136,6 +158,9 @@ public class DetailsActivity extends AppCompatActivity {
         Button remove_button = (Button) findViewById(R.id.remove_button);
         remove_button.setVisibility(View.GONE);
 
+    }
+
+    public void addNewWorkout(View view){
 
     }
 }
