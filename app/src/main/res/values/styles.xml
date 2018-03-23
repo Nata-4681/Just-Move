@@ -24,6 +24,10 @@
         <item name="android:spinnerItemStyle">@style/mySpinnerItemStyle</item>
     </style>
 
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/justmovesplash</item>
+    </style>
+
 
 
 </resources>
